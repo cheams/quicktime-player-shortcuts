@@ -1,5 +1,7 @@
 # QuickTime Player Shortcuts
 
+换过了很多 Mac OS 的播放器，但都不流畅丝滑，还常闪退。兜兜转转又回到了 QuickTime Player，虽然好用，但是没有快捷键的支持等于不可用。教程让 AI 写的很详细，如果你还不会使用，可以扔给 AI 让它自己操作。两个软件都已测试可用。
+
 QuickTime Player shortcuts for macOS, with `Keyboard Maestro` as the primary setup and `BetterTouchTool` as an optional alternative.
 
 This project adds simple single-key controls that only work when `QuickTime Player` is the active app, so they do not interfere with typing in other applications.
