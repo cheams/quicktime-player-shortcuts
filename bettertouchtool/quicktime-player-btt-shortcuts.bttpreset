@@ -106,7 +106,7 @@
           "BTTEnabled": 1,
           "BTTEnabled2": 1,
           "BTTShortcutKeyCode": 123,
-          "BTTShortcutModifierKeys": 0,
+          "BTTShortcutModifierKeys": 8388608,
           "BTTOrder": 3,
           "BTTAutoAdaptToKeyboardLayout": 0,
           "BTTActionsToExecute": [
@@ -116,7 +116,7 @@
               "BTTAdditionalActionData": {
                 "BTTAppleScriptRunInBackground": false,
                 "BTTScriptType": 0,
-                "BTTAppleScriptString": "tell application \"QuickTime Player\"\n    if not (exists document 1) then return\n    set theDoc to front document\n    set newTime to (get «property time» of theDoc) - 7\n    if newTime < 0 then set newTime to 0\n    set «property time» of theDoc to newTime\nend tell",
+                "BTTAppleScriptString": "tell application \"QuickTime Player\"\n    if not (exists document 1) then return\n    set theDoc to document 1\n    set newTime to (current time of theDoc) - 7\n    if newTime < 0 then set newTime to 0\n    set current time of theDoc to newTime\nend tell",
                 "BTTAppleScriptUsePath": false,
                 "BTTScriptLocation": 0
               }
@@ -133,7 +133,7 @@
           "BTTEnabled": 1,
           "BTTEnabled2": 1,
           "BTTShortcutKeyCode": 124,
-          "BTTShortcutModifierKeys": 0,
+          "BTTShortcutModifierKeys": 8388608,
           "BTTOrder": 4,
           "BTTAutoAdaptToKeyboardLayout": 0,
           "BTTActionsToExecute": [
@@ -143,7 +143,7 @@
               "BTTAdditionalActionData": {
                 "BTTAppleScriptRunInBackground": false,
                 "BTTScriptType": 0,
-                "BTTAppleScriptString": "tell application \"QuickTime Player\"\n    if not (exists document 1) then return\n    set theDoc to front document\n    set docDuration to get «property durn» of theDoc\n    set newTime to (get «property time» of theDoc) + 7\n    if newTime > docDuration then set newTime to docDuration\n    set «property time» of theDoc to newTime\nend tell",
+                "BTTAppleScriptString": "tell application \"QuickTime Player\"\n    if not (exists document 1) then return\n    set theDoc to document 1\n    set newTime to (current time of theDoc) + 7\n    set docDuration to duration of theDoc\n    if newTime > docDuration then set newTime to docDuration\n    set current time of theDoc to newTime\nend tell",
                 "BTTAppleScriptUsePath": false,
                 "BTTScriptLocation": 0
               }
