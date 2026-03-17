@@ -49,29 +49,131 @@ This repository provides a lightweight AppleScript-based solution with app-scope
 
 #### Option 1: Keyboard Maestro
 
-1. Install and launch `Keyboard Maestro`.
-2. Run:
+If you want the easiest setup, choose this option.
+
+1. Download and install `Keyboard Maestro`.
+2. Open `Keyboard Maestro`.
+3. Download this repository, or open it in Terminal.
+4. Go to the project folder.
+5. Run:
 
 ```zsh
 ./scripts/import-km-shortcuts.sh
 ```
 
-3. Import the macro group when Keyboard Maestro opens the file.
-4. Open a video in QuickTime Player and test `A`, `S`, `D`, `Left Arrow`, and `Right Arrow`.
+6. Keyboard Maestro should open an import window.
+7. Click the import button.
+8. You should now see a macro group named `QuickTime Controls`.
+9. Make sure the group is enabled.
+10. Open `QuickTime Player`.
+11. Open any video file.
+12. Press:
+
+- `D` one time: speed should become `1.5x`
+- `D` one more time: speed should become `2.0x`
+- `S`: speed should go back to `1.0x`
+- `A`: speed should go down by `0.5x`
+- `Left Arrow`: video should jump back `7` seconds
+- `Right Arrow`: video should jump forward `7` seconds
+
+If you only want one setup method, you can stop here.
 
 #### Option 2: BetterTouchTool
 
-1. Install and launch `BetterTouchTool`.
-2. Run:
+Use this if you prefer `BetterTouchTool` instead of `Keyboard Maestro`.
+
+1. Download and install `BetterTouchTool`.
+2. Open `BetterTouchTool`.
+3. Download this repository, or open it in Terminal.
+4. Go to the project folder.
+5. Run:
 
 ```zsh
 ./scripts/import-btt-shortcuts.sh
 ```
 
-3. Import the preset.
-4. Open a video in QuickTime Player and test the same keys.
+6. BetterTouchTool should open the preset import window.
+7. Confirm the import.
+8. Open `QuickTime Player`.
+9. Open any video file.
+10. Press:
+
+- `D` one time: speed should become `1.5x`
+- `D` one more time: speed should become `2.0x`
+- `S`: speed should go back to `1.0x`
+- `A`: speed should go down by `0.5x`
+- `Left Arrow`: video should jump back `7` seconds
+- `Right Arrow`: video should jump forward `7` seconds
 
 This repository uses the current BetterTouchTool preset action format for AppleScript-based keyboard shortcuts.
+
+### Very Detailed Step-by-Step Setup
+
+#### Keyboard Maestro, very slowly
+
+1. Make sure `QuickTime Player` is installed on your Mac.
+2. Make sure `Keyboard Maestro` is installed.
+3. Open `Keyboard Maestro`.
+4. Open `Terminal`.
+5. Move into this repository folder.
+6. Type:
+
+```zsh
+./scripts/import-km-shortcuts.sh
+```
+
+7. Go back to `Keyboard Maestro`.
+8. Look for a group called `QuickTime Controls`.
+9. If you see a checkbox next to it, make sure it is checked.
+10. Click the group.
+11. You should see five macros inside it.
+12. Their names should look like:
+
+- `A -0.5x`
+- `S 1.0x`
+- `D +0.5x`
+- `Left -7s`
+- `Right +7s`
+
+13. Open `QuickTime Player`.
+14. Open a video.
+15. Click the video once so QuickTime is really the active app.
+16. Press `D`.
+17. Press `D` again.
+18. Press `S`.
+19. Press `Left Arrow`.
+20. Press `Right Arrow`.
+
+If all of these work, setup is finished.
+
+#### BetterTouchTool, very slowly
+
+1. Make sure `QuickTime Player` is installed on your Mac.
+2. Make sure `BetterTouchTool` is installed.
+3. Open `BetterTouchTool`.
+4. Open `Terminal`.
+5. Move into this repository folder.
+6. Type:
+
+```zsh
+./scripts/import-btt-shortcuts.sh
+```
+
+7. Go back to `BetterTouchTool`.
+8. Confirm the preset import if a prompt appears.
+9. In BetterTouchTool, check that there is a QuickTime-specific app section.
+10. That section should be for `QuickTime Player`.
+11. Inside it, you should have five keyboard shortcuts.
+12. Open `QuickTime Player`.
+13. Open a video.
+14. Click the video once.
+15. Press `D`.
+16. Press `D` again.
+17. Press `S`.
+18. Press `Left Arrow`.
+19. Press `Right Arrow`.
+
+If all of these work, setup is finished.
 
 ### Manual Keyboard Maestro Setup
 
@@ -112,6 +214,32 @@ If you prefer to create the macros manually instead of importing the file:
 - Verify QuickTime Player is the frontmost app
 - Verify a document is open in QuickTime Player
 - Make sure Keyboard Maestro or BetterTouchTool has the permissions it needs in macOS
+
+#### I do not know where to run the command
+
+1. Open `Terminal`
+2. Drag the project folder into the Terminal window
+3. Type `cd `, then drop the folder path, then press Enter
+4. Run one of these:
+
+```zsh
+./scripts/import-km-shortcuts.sh
+```
+
+or
+
+```zsh
+./scripts/import-btt-shortcuts.sh
+```
+
+#### I imported it, but the keys still do nothing
+
+1. Open `QuickTime Player`
+2. Open a real video file
+3. Click inside the video window
+4. Try again
+5. If it still fails, close and reopen Keyboard Maestro or BetterTouchTool
+6. Import the preset or macro file one more time
 
 ### Customization
 
@@ -166,29 +294,128 @@ QuickTime Player 本身很轻量，但默认快捷键在听写、语言学习、
 
 #### 方案一：Keyboard Maestro
 
-1. 安装并启动 `Keyboard Maestro`
-2. 运行：
+如果你想用最简单的方式，优先选这个。
+
+1. 下载安装 `Keyboard Maestro`
+2. 打开 `Keyboard Maestro`
+3. 下载这个仓库，或者在终端里进入这个仓库目录
+4. 运行：
 
 ```zsh
 ./scripts/import-km-shortcuts.sh
 ```
 
-3. 在 Keyboard Maestro 中导入宏组
-4. 打开一个 QuickTime 视频，测试 `A`、`S`、`D`、左右方向键
+5. Keyboard Maestro 会弹出导入窗口
+6. 点击导入
+7. 你应该能看到一个叫 `QuickTime Controls` 的宏组
+8. 确认这个宏组是启用状态
+9. 打开 `QuickTime Player`
+10. 打开任意一个视频文件
+11. 依次测试：
+
+- 按一次 `D`，应该变成 `1.5x`
+- 再按一次 `D`，应该变成 `2.0x`
+- 按 `S`，应该回到 `1.0x`
+- 按 `A`，应该减速 `0.5x`
+- 按左方向键，应该后退 `7` 秒
+- 按右方向键，应该前进 `7` 秒
+
+如果这些都正常，就已经配置完成了。
 
 #### 方案二：BetterTouchTool
 
-1. 安装并启动 `BetterTouchTool`
-2. 运行：
+如果你更喜欢 `BetterTouchTool`，就用这个方案。
+
+1. 下载安装 `BetterTouchTool`
+2. 打开 `BetterTouchTool`
+3. 下载这个仓库，或者在终端里进入这个仓库目录
+4. 运行：
 
 ```zsh
 ./scripts/import-btt-shortcuts.sh
 ```
 
-3. 在 BetterTouchTool 中导入预设
-4. 打开一个 QuickTime 视频，测试同样的按键
+5. BetterTouchTool 会弹出导入预设窗口
+6. 确认导入
+7. 打开 `QuickTime Player`
+8. 打开任意一个视频文件
+9. 依次测试：
+
+- 按一次 `D`，应该变成 `1.5x`
+- 再按一次 `D`，应该变成 `2.0x`
+- 按 `S`，应该回到 `1.0x`
+- 按 `A`，应该减速 `0.5x`
+- 按左方向键，应该后退 `7` 秒
+- 按右方向键，应该前进 `7` 秒
 
 本仓库里的 BetterTouchTool 预设已经使用当前版本可识别的 AppleScript 动作格式。
+
+### 超详细步骤
+
+#### Keyboard Maestro 版本，慢慢来
+
+1. 先确认你的 Mac 里有 `QuickTime Player`
+2. 再确认你已经安装了 `Keyboard Maestro`
+3. 打开 `Keyboard Maestro`
+4. 打开 `终端`
+5. 进入这个仓库所在的文件夹
+6. 输入：
+
+```zsh
+./scripts/import-km-shortcuts.sh
+```
+
+7. 回到 `Keyboard Maestro`
+8. 找到一个叫 `QuickTime Controls` 的宏组
+9. 确认它前面的勾选框是打开的
+10. 点开这个宏组
+11. 里面应该有五个宏
+12. 名字大概会是：
+
+- `A -0.5x`
+- `S 1.0x`
+- `D +0.5x`
+- `Left -7s`
+- `Right +7s`
+
+13. 现在打开 `QuickTime Player`
+14. 打开一个视频文件
+15. 用鼠标点一下视频窗口，确保现在最前面的程序真的是 QuickTime
+16. 按 `D`
+17. 再按一次 `D`
+18. 按 `S`
+19. 按左方向键
+20. 按右方向键
+
+如果这些都正常，说明已经配置好了。
+
+#### BetterTouchTool 版本，慢慢来
+
+1. 先确认你的 Mac 里有 `QuickTime Player`
+2. 再确认你已经安装了 `BetterTouchTool`
+3. 打开 `BetterTouchTool`
+4. 打开 `终端`
+5. 进入这个仓库所在的文件夹
+6. 输入：
+
+```zsh
+./scripts/import-btt-shortcuts.sh
+```
+
+7. 回到 `BetterTouchTool`
+8. 如果弹出导入窗口，就点确认
+9. 在 BetterTouchTool 里检查是否出现了一个只针对 `QuickTime Player` 的配置
+10. 里面应该有五个键盘快捷键
+11. 打开 `QuickTime Player`
+12. 打开一个视频文件
+13. 用鼠标点一下视频窗口
+14. 按 `D`
+15. 再按一次 `D`
+16. 按 `S`
+17. 按左方向键
+18. 按右方向键
+
+如果这些都正常，说明已经配置好了。
 
 ### 手动配置 Keyboard Maestro
 
@@ -229,6 +456,33 @@ QuickTime Player 本身很轻量，但默认快捷键在听写、语言学习、
 - 确认 QuickTime Player 是当前前台应用
 - 确认 QuickTime 里已经打开了视频文件
 - 确认 Keyboard Maestro 或 BetterTouchTool 已获得 macOS 所需权限
+
+#### 我不知道命令该在哪里输入
+
+1. 打开 `终端`
+2. 找到这个仓库文件夹
+3. 把文件夹拖进终端窗口
+4. 输入 `cd `，再把文件夹路径放进去，然后回车
+5. 然后运行下面两个命令中的一个：
+
+```zsh
+./scripts/import-km-shortcuts.sh
+```
+
+或者：
+
+```zsh
+./scripts/import-btt-shortcuts.sh
+```
+
+#### 我已经导入了，但按键还是没反应
+
+1. 打开 `QuickTime Player`
+2. 打开一个真实的视频文件
+3. 用鼠标点一下视频窗口
+4. 再试一次按键
+5. 如果还不行，就退出并重新打开 Keyboard Maestro 或 BetterTouchTool
+6. 然后重新导入一次
 
 ### 自定义
 
