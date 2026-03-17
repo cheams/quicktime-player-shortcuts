@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>AddToMacroPalette</key>
+		<false/>
+		<key>AddToStatusMenu</key>
+		<false/>
+		<key>CreationDate</key>
+		<real>795379200</real>
+		<key>KeyCode</key>
+		<integer>32767</integer>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>9001</integer>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>File</key>
+						<data>
+						</data>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteAppleScript</string>
+						<key>NewFile</key>
+						<string></string>
+						<key>Text</key>
+						<string>tell application "QuickTime Player"
+	if not (exists document 1) then return
+	set theDoc to front document
+	set newTime to (get «property time» of theDoc) - 7
+	if newTime &lt; 0 then set newTime to 0
+	set «property time» of theDoc to newTime
+end tell
+</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>795379201</real>
+				<key>IsActive</key>
+				<true/>
+				<key>ModificationDate</key>
+				<real>795379201</real>
+				<key>Name</key>
+				<string>Left -7s</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>123</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+						<key>TriggerRepeat</key>
+						<true/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>A0A17607-8443-4026-8F08-70AFD7BF55A1</string>
+			</dict>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>9002</integer>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>File</key>
+						<data>
+						</data>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteAppleScript</string>
+						<key>NewFile</key>
+						<string></string>
+						<key>Text</key>
+						<string>tell application "QuickTime Player"
+	if not (exists document 1) then return
+	set theDoc to front document
+	set currentRate to get «property rate» of theDoc
+	if currentRate &lt; 1.0 then set currentRate to 1.0
+	set newRate to currentRate - 0.5
+	if newRate &lt; 0.5 then set newRate to 0.5
+	«event MVWRplay» theDoc
+	delay 0.05
+	set «property rate» of theDoc to newRate
+end tell
+</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>795379202</real>
+				<key>IsActive</key>
+				<true/>
+				<key>ModificationDate</key>
+				<real>795379202</real>
+				<key>Name</key>
+				<string>A -0.5x</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>0</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>01EC2FF5-14D4-4828-BF54-A55A6D960244</string>
+			</dict>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>9003</integer>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>File</key>
+						<data>
+						</data>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteAppleScript</string>
+						<key>NewFile</key>
+						<string></string>
+						<key>Text</key>
+						<string>tell application "QuickTime Player"
+	if not (exists document 1) then return
+	set theDoc to front document
+	«event MVWRplay» theDoc
+	delay 0.05
+	set «property rate» of theDoc to 1.0
+end tell
+</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>795379203</real>
+				<key>IsActive</key>
+				<true/>
+				<key>ModificationDate</key>
+				<real>795379203</real>
+				<key>Name</key>
+				<string>S 1.0x</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>1</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>AA402849-8B0B-420D-A14E-97A327699A08</string>
+			</dict>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>9004</integer>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>File</key>
+						<data>
+						</data>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteAppleScript</string>
+						<key>NewFile</key>
+						<string></string>
+						<key>Text</key>
+						<string>tell application "QuickTime Player"
+	if not (exists document 1) then return
+	set theDoc to front document
+	set currentRate to get «property rate» of theDoc
+	if currentRate &lt; 1.0 then set currentRate to 1.0
+	set newRate to currentRate + 0.5
+	«event MVWRplay» theDoc
+	delay 0.05
+	set «property rate» of theDoc to newRate
+end tell
+</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>795379204</real>
+				<key>IsActive</key>
+				<true/>
+				<key>ModificationDate</key>
+				<real>795379204</real>
+				<key>Name</key>
+				<string>D +0.5x</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>2</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+						<key>TriggerRepeat</key>
+						<false/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>3A28684E-660E-42E1-8D44-0A2D6D436B2A</string>
+			</dict>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionUID</key>
+						<integer>9005</integer>
+						<key>DisplayKind</key>
+						<string>None</string>
+						<key>File</key>
+						<data>
+						</data>
+						<key>IsActive</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<true/>
+						<key>MacroActionType</key>
+						<string>ExecuteAppleScript</string>
+						<key>NewFile</key>
+						<string></string>
+						<key>Text</key>
+						<string>tell application "QuickTime Player"
+	if not (exists document 1) then return
+	set theDoc to front document
+	set docDuration to get «property durn» of theDoc
+	set newTime to (get «property time» of theDoc) + 7
+	if newTime &gt; docDuration then set newTime to docDuration
+	set «property time» of theDoc to newTime
+end tell
+</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>Variable</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>795379205</real>
+				<key>IsActive</key>
+				<true/>
+				<key>ModificationDate</key>
+				<real>795379205</real>
+				<key>Name</key>
+				<string>Right +7s</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>124</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+						<key>TriggerRepeat</key>
+						<true/>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>F5E4F9C7-45E8-4F05-B709-9AE4607983D4</string>
+			</dict>
+		</array>
+		<key>Modifiers</key>
+		<integer>0</integer>
+		<key>Name</key>
+		<string>QuickTime Controls</string>
+		<key>Targeting</key>
+		<dict>
+			<key>Targeting</key>
+			<string>Included</string>
+			<key>TargetingApps</key>
+			<array>
+				<dict>
+					<key>BundleIdentifier</key>
+					<string>com.apple.QuickTimePlayerX</string>
+					<key>Name</key>
+					<string>QuickTime Player</string>
+					<key>NewFile</key>
+					<string>/System/Applications/QuickTime Player.app</string>
+				</dict>
+			</array>
+		</dict>
+		<key>UID</key>
+		<string>1DD7DB4C-C7BE-478D-8E9E-46D39F7E9029</string>
+	</dict>
+</array>
+</plist>
