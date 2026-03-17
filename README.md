@@ -71,6 +71,8 @@ This repository provides a lightweight AppleScript-based solution with app-scope
 3. Import the preset.
 4. Open a video in QuickTime Player and test the same keys.
 
+This repository uses the current BetterTouchTool preset action format for AppleScript-based keyboard shortcuts.
+
 ### Manual Keyboard Maestro Setup
 
 If you prefer to create the macros manually instead of importing the file:
@@ -185,6 +187,8 @@ QuickTime Player 本身很轻量，但默认快捷键在听写、语言学习、
 
 3. 在 BetterTouchTool 中导入预设
 4. 打开一个 QuickTime 视频，测试同样的按键
+
+本仓库里的 BetterTouchTool 预设已经使用当前版本可识别的 AppleScript 动作格式。
 
 ### 手动配置 Keyboard Maestro
 

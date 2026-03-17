@@ -3,7 +3,7 @@
   "BTTPresetInfoURL": "",
   "BTTPresetName": "QuickTime Player Shortcuts",
   "BTTPresetColor": "63.000000, 125.000000, 218.000000, 255.000000",
-  "BTTPresetUUID": "fcb9c362-639c-4562-9ab1-7d3c4933aebd",
+  "BTTPresetUUID": "97FC7641-6BA3-4BEA-BF1D-744D8A3B9413",
   "BTTPresetContent": [
     {
       "BTTAppBundleIdentifier": "com.apple.QuickTimePlayerX",
@@ -17,9 +17,7 @@
           "BTTTriggerType": 0,
           "BTTTriggerTypeDescription": "Keyboard Shortcut",
           "BTTTriggerClass": "BTTTriggerTypeKeyboardShortcut",
-          "BTTUUID": "5d8863a9-e217-4014-941d-0ec24fc7aeab",
-          "BTTPredefinedActionType": 366,
-          "BTTPredefinedActionName": "Empty Placeholder",
+          "BTTUUID": "BE9EE70D-FB74-4461-A647-EB5E7BC36683",
           "BTTTriggerOnDown": 1,
           "BTTLayoutIndependentChar": "a",
           "BTTEnabled": 1,
@@ -28,29 +26,17 @@
           "BTTShortcutModifierKeys": 0,
           "BTTOrder": 0,
           "BTTAutoAdaptToKeyboardLayout": 0,
-          "BTTAdditionalActions": [
+          "BTTActionsToExecute": [
             {
-              "BTTActionCategory": 0,
-              "BTTTriggerParentUUID": "5d8863a9-e217-4014-941d-0ec24fc7aeab",
-              "BTTIsPureAction": true,
-              "BTTTriggerClass": "BTTTriggerTypeKeyboardShortcut",
-              "BTTUUID": "14afbffe-b86f-420a-a937-694a139f6650",
-              "BTTPredefinedActionType": 281,
+              "BTTPredefinedActionType": 172,
               "BTTPredefinedActionName": "Run Apple Script (blocking)",
               "BTTAdditionalActionData": {
-                "BTTScriptFunctionToCall": "",
-                "BTTJavaScriptUseIsolatedContext": false,
                 "BTTAppleScriptRunInBackground": false,
-                "BTTScriptType": 3,
-                "BTTAppleScriptString": "tell application \"QuickTime Player\"\n    if (exists document 1) then\n        set docRef to document 1\n        set newRate to (rate of docRef) - 0.5\n        if newRate < 0.5 then set newRate to 0.5\n        set rate of docRef to newRate\n    end if\nend tell",
-                "BTTActionJSRunInSeparateContext": false,
+                "BTTScriptType": 0,
+                "BTTAppleScriptString": "tell application \"QuickTime Player\"\n    if not (exists document 1) then return\n    set theDoc to front document\n    set currentRate to get «property rate» of theDoc\n    if currentRate < 1.0 then set currentRate to 1.0\n    set newRate to currentRate - 0.5\n    if newRate < 0.5 then set newRate to 0.5\n    «event MVWRplay» theDoc\n    delay 0.05\n    set «property rate» of theDoc to newRate\nend tell",
                 "BTTAppleScriptUsePath": false,
                 "BTTScriptLocation": 0
-              },
-              "BTTEnabled": 1,
-              "BTTEnabled2": 1,
-              "BTTOrder": 0,
-              "BTTAutoAdaptToKeyboardLayout": 0
+              }
             }
           ]
         },
@@ -59,9 +45,7 @@
           "BTTTriggerType": 0,
           "BTTTriggerTypeDescription": "Keyboard Shortcut",
           "BTTTriggerClass": "BTTTriggerTypeKeyboardShortcut",
-          "BTTUUID": "ff65d953-5a22-4f43-942e-9fc6f572f986",
-          "BTTPredefinedActionType": 366,
-          "BTTPredefinedActionName": "Empty Placeholder",
+          "BTTUUID": "268E5AD0-5C74-4B17-AAC3-B6A82A5AA2B6",
           "BTTTriggerOnDown": 1,
           "BTTLayoutIndependentChar": "s",
           "BTTEnabled": 1,
@@ -70,29 +54,17 @@
           "BTTShortcutModifierKeys": 0,
           "BTTOrder": 1,
           "BTTAutoAdaptToKeyboardLayout": 0,
-          "BTTAdditionalActions": [
+          "BTTActionsToExecute": [
             {
-              "BTTActionCategory": 0,
-              "BTTTriggerParentUUID": "ff65d953-5a22-4f43-942e-9fc6f572f986",
-              "BTTIsPureAction": true,
-              "BTTTriggerClass": "BTTTriggerTypeKeyboardShortcut",
-              "BTTUUID": "ff283ded-1482-421c-8b62-95df7749c030",
-              "BTTPredefinedActionType": 281,
+              "BTTPredefinedActionType": 172,
               "BTTPredefinedActionName": "Run Apple Script (blocking)",
               "BTTAdditionalActionData": {
-                "BTTScriptFunctionToCall": "",
-                "BTTJavaScriptUseIsolatedContext": false,
                 "BTTAppleScriptRunInBackground": false,
-                "BTTScriptType": 3,
-                "BTTAppleScriptString": "tell application \"QuickTime Player\"\n    if (exists document 1) then\n        set rate of document 1 to 1.0\n    end if\nend tell",
-                "BTTActionJSRunInSeparateContext": false,
+                "BTTScriptType": 0,
+                "BTTAppleScriptString": "tell application \"QuickTime Player\"\n    if not (exists document 1) then return\n    set theDoc to front document\n    «event MVWRplay» theDoc\n    delay 0.05\n    set «property rate» of theDoc to 1.0\nend tell",
                 "BTTAppleScriptUsePath": false,
                 "BTTScriptLocation": 0
-              },
-              "BTTEnabled": 1,
-              "BTTEnabled2": 1,
-              "BTTOrder": 1,
-              "BTTAutoAdaptToKeyboardLayout": 0
+              }
             }
           ]
         },
@@ -101,9 +73,7 @@
           "BTTTriggerType": 0,
           "BTTTriggerTypeDescription": "Keyboard Shortcut",
           "BTTTriggerClass": "BTTTriggerTypeKeyboardShortcut",
-          "BTTUUID": "5fb89070-5128-4428-a42c-bfd827c0571e",
-          "BTTPredefinedActionType": 366,
-          "BTTPredefinedActionName": "Empty Placeholder",
+          "BTTUUID": "2141BAD2-A8C5-4466-9C22-98738E824B52",
           "BTTTriggerOnDown": 1,
           "BTTLayoutIndependentChar": "d",
           "BTTEnabled": 1,
@@ -112,29 +82,17 @@
           "BTTShortcutModifierKeys": 0,
           "BTTOrder": 2,
           "BTTAutoAdaptToKeyboardLayout": 0,
-          "BTTAdditionalActions": [
+          "BTTActionsToExecute": [
             {
-              "BTTActionCategory": 0,
-              "BTTTriggerParentUUID": "5fb89070-5128-4428-a42c-bfd827c0571e",
-              "BTTIsPureAction": true,
-              "BTTTriggerClass": "BTTTriggerTypeKeyboardShortcut",
-              "BTTUUID": "1bc2d604-7ce4-4ed8-a6e2-e3822e047709",
-              "BTTPredefinedActionType": 281,
+              "BTTPredefinedActionType": 172,
               "BTTPredefinedActionName": "Run Apple Script (blocking)",
               "BTTAdditionalActionData": {
-                "BTTScriptFunctionToCall": "",
-                "BTTJavaScriptUseIsolatedContext": false,
                 "BTTAppleScriptRunInBackground": false,
-                "BTTScriptType": 3,
-                "BTTAppleScriptString": "tell application \"QuickTime Player\"\n    if (exists document 1) then\n        set docRef to document 1\n        set newRate to (rate of docRef) + 0.5\n        if newRate > 4.0 then set newRate to 4.0\n        set rate of docRef to newRate\n    end if\nend tell",
-                "BTTActionJSRunInSeparateContext": false,
+                "BTTScriptType": 0,
+                "BTTAppleScriptString": "tell application \"QuickTime Player\"\n    if not (exists document 1) then return\n    set theDoc to front document\n    set currentRate to get «property rate» of theDoc\n    if currentRate < 1.0 then set currentRate to 1.0\n    set newRate to currentRate + 0.5\n    «event MVWRplay» theDoc\n    delay 0.05\n    set «property rate» of theDoc to newRate\nend tell",
                 "BTTAppleScriptUsePath": false,
                 "BTTScriptLocation": 0
-              },
-              "BTTEnabled": 1,
-              "BTTEnabled2": 1,
-              "BTTOrder": 2,
-              "BTTAutoAdaptToKeyboardLayout": 0
+              }
             }
           ]
         },
@@ -143,9 +101,7 @@
           "BTTTriggerType": 0,
           "BTTTriggerTypeDescription": "Keyboard Shortcut",
           "BTTTriggerClass": "BTTTriggerTypeKeyboardShortcut",
-          "BTTUUID": "d7436ebb-e2b5-4b74-8cf4-8a7d3869c76a",
-          "BTTPredefinedActionType": 366,
-          "BTTPredefinedActionName": "Empty Placeholder",
+          "BTTUUID": "155C72AE-BAED-44D6-A5CE-DC9E303A39DD",
           "BTTTriggerOnDown": 1,
           "BTTEnabled": 1,
           "BTTEnabled2": 1,
@@ -153,29 +109,17 @@
           "BTTShortcutModifierKeys": 0,
           "BTTOrder": 3,
           "BTTAutoAdaptToKeyboardLayout": 0,
-          "BTTAdditionalActions": [
+          "BTTActionsToExecute": [
             {
-              "BTTActionCategory": 0,
-              "BTTTriggerParentUUID": "d7436ebb-e2b5-4b74-8cf4-8a7d3869c76a",
-              "BTTIsPureAction": true,
-              "BTTTriggerClass": "BTTTriggerTypeKeyboardShortcut",
-              "BTTUUID": "01f78b1a-4618-4188-8c4e-9079d7a6a0ed",
-              "BTTPredefinedActionType": 281,
+              "BTTPredefinedActionType": 172,
               "BTTPredefinedActionName": "Run Apple Script (blocking)",
               "BTTAdditionalActionData": {
-                "BTTScriptFunctionToCall": "",
-                "BTTJavaScriptUseIsolatedContext": false,
                 "BTTAppleScriptRunInBackground": false,
-                "BTTScriptType": 3,
-                "BTTAppleScriptString": "tell application \"QuickTime Player\"\n    if (exists document 1) then\n        set docRef to document 1\n        set newTime to (current time of docRef) - 7\n        if newTime < 0 then set newTime to 0\n        set current time of docRef to newTime\n    end if\nend tell",
-                "BTTActionJSRunInSeparateContext": false,
+                "BTTScriptType": 0,
+                "BTTAppleScriptString": "tell application \"QuickTime Player\"\n    if not (exists document 1) then return\n    set theDoc to front document\n    set newTime to (get «property time» of theDoc) - 7\n    if newTime < 0 then set newTime to 0\n    set «property time» of theDoc to newTime\nend tell",
                 "BTTAppleScriptUsePath": false,
                 "BTTScriptLocation": 0
-              },
-              "BTTEnabled": 1,
-              "BTTEnabled2": 1,
-              "BTTOrder": 3,
-              "BTTAutoAdaptToKeyboardLayout": 0
+              }
             }
           ]
         },
@@ -184,9 +128,7 @@
           "BTTTriggerType": 0,
           "BTTTriggerTypeDescription": "Keyboard Shortcut",
           "BTTTriggerClass": "BTTTriggerTypeKeyboardShortcut",
-          "BTTUUID": "97694b8b-b9f0-4f75-aa28-e99eac705b54",
-          "BTTPredefinedActionType": 366,
-          "BTTPredefinedActionName": "Empty Placeholder",
+          "BTTUUID": "6CBD7F40-DE8F-4AD6-B70A-D7B45F6487B3",
           "BTTTriggerOnDown": 1,
           "BTTEnabled": 1,
           "BTTEnabled2": 1,
@@ -194,29 +136,17 @@
           "BTTShortcutModifierKeys": 0,
           "BTTOrder": 4,
           "BTTAutoAdaptToKeyboardLayout": 0,
-          "BTTAdditionalActions": [
+          "BTTActionsToExecute": [
             {
-              "BTTActionCategory": 0,
-              "BTTTriggerParentUUID": "97694b8b-b9f0-4f75-aa28-e99eac705b54",
-              "BTTIsPureAction": true,
-              "BTTTriggerClass": "BTTTriggerTypeKeyboardShortcut",
-              "BTTUUID": "2e6e8c28-294d-4f75-9a17-4b21dbb3a138",
-              "BTTPredefinedActionType": 281,
+              "BTTPredefinedActionType": 172,
               "BTTPredefinedActionName": "Run Apple Script (blocking)",
               "BTTAdditionalActionData": {
-                "BTTScriptFunctionToCall": "",
-                "BTTJavaScriptUseIsolatedContext": false,
                 "BTTAppleScriptRunInBackground": false,
-                "BTTScriptType": 3,
-                "BTTAppleScriptString": "tell application \"QuickTime Player\"\n    if (exists document 1) then\n        set docRef to document 1\n        set newTime to (current time of docRef) + 7\n        set docDuration to duration of docRef\n        if newTime > docDuration then set newTime to docDuration\n        set current time of docRef to newTime\n    end if\nend tell",
-                "BTTActionJSRunInSeparateContext": false,
+                "BTTScriptType": 0,
+                "BTTAppleScriptString": "tell application \"QuickTime Player\"\n    if not (exists document 1) then return\n    set theDoc to front document\n    set docDuration to get «property durn» of theDoc\n    set newTime to (get «property time» of theDoc) + 7\n    if newTime > docDuration then set newTime to docDuration\n    set «property time» of theDoc to newTime\nend tell",
                 "BTTAppleScriptUsePath": false,
                 "BTTScriptLocation": 0
-              },
-              "BTTEnabled": 1,
-              "BTTEnabled2": 1,
-              "BTTOrder": 4,
-              "BTTAutoAdaptToKeyboardLayout": 0
+              }
             }
           ]
         }
