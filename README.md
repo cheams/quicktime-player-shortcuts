@@ -1,4 +1,4 @@
-# QuickTime Player Shortcuts
+# QuickTime Player Shortcuts 复活Macos最强播放器
 
 换过了很多 Mac OS 的播放器，但都不流畅丝滑，还常闪退。兜兜转转又回到了 QuickTime Player，虽然好用，但是没有快捷键的支持等于不可用。可以扔给 AI 让它自己操作。两个软件配置都已测试可用。：）
 
